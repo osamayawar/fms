@@ -6,15 +6,104 @@
         
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-        {% endblock %}
-        
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}" />
+        {% endblock %} 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% block header %}
+            <header id="header" class="site-header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7 col-xs-2">
+                            <nav class="top-nav">
+                                <span class="mobile-btn"><i class="fa fa-bars"></i></span>
+                                <ul>
+                                    <li><a href="#">Courses</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Teachers</a></li>
+                                    <li><a href="#">Campus</a></li>
+                                    <li><a href="#">Book Store</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="col-md-5 col-sm-5 col-xs-10">
+                            <div class="top-right">
+                                <div class="language dropdown">
+                                    <ul>
+                                        <li><a href="#">Add facebook here</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="searchbox">
+                                    <form method="get" class="search-form" action="#" />
+                                        <label>
+                                            <span class="screen-reader-text">Search for:</span>
+                                            <input type="search" class="search-field" placeholder="Search" name="s" />
+                                        </label>
+                                        <input type="submit" class="search-submit" value="Search" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mid-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-8 col-xs-9">
+                            <div class="site-brand">
+                                <a class="logo" href="index.html">
+                                    <img src="{{ asset('images/logo.jpg') }}" alt="Frontier Model School" />
+                                </a>
+                            </div><!-- .site-brand -->
+                        </div>
+
+                        <div class="col-md-8 col-sm-4 col-xs-3">
+                            <nav class="main-menu">
+                                <span class="mobile-btn"><i class="fa fa-bars"></i></span>
+                                <ul>
+                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                                    <li><a href="courses.html">Managing Board</a></li>
+                                    <li><a href="event-grid.html"></a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="blog.html">Blogs</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .mid-header -->
+        </header><!-- .site-header -->
+
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <script src="{{ asset('js/plugins.js') }}"></script>
+
+            <!-- jQuery -->    
+            <script src="{{ asset('js/jquery-1.11.3.js') }}"></script>
+            <!-- Boostrap -->
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <!-- Jquery Parallax -->
+            <script src="{{ asset('js/parallax.min.js') }}"></script>
+            <!-- jQuery UI -->
+            <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+            <!-- jQuery Sticky -->
+            <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+            <!-- OWL CAROUSEL Slider -->    
+            <script src="{{ asset('js/owl.carousel.js') }}"></script>
+            <!-- PrettyPhoto -->   
+            <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
+            <!-- Jquery Isotope -->
+            <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+            <!-- Main -->    
             <script src="{{ asset('js/main.js') }}"></script>
         {% endblock %}
     </body>
